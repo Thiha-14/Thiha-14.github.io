@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <div class="header-container">
+                <div class="header">
+                <h1>Check Weather</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" name="" id="search-box" placeholder="Search City">
+            </div>
+            <div class="search-button">
+                <button class="search-icon">
+                    <h3 class="search-text">Search</h3>
+                </button>
+            </div>
+            </div>
+            <div class="footer-container">
+
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-container">
+                <div class="city">
+                <h2>City Name</h2>
+                </div>
+                <div class="condition">
+                    <img src="images/default.png" alt="sunny" class="sunny">
+                </div>
+                <div class="temperature">
+                    <h1>  °C</h1>
+                </div>
+                <div class="weather-detail">
+                    <div class="detail-item">
+                        <img src="images/humidity.png" alt="Humidity icon" class="detail-icon">
+                        <span>Humidity: <strong class="humidity-text">--%</strong></span>
+                    </div>
+                    <div class="detail-item">
+                        <img src="images/wind.png" alt="Wind icon" class="detail-icon">
+                        <span>Wind: <strong class="wind-text">-- km/h</strong></span>
+                    </div>
+                </div>
+
+                <div class="date-time"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
