@@ -8,11 +8,11 @@ const icon=document.querySelector(".sunny");
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
-    if (response.status === 404) {
+    var data = await response.json();
+    if (response.status === 404|| data.name.toLowerCase() !== city.toLowerCase()) {
         alert(" City not found. Try again.");
         return;
     }
-    var data = await response.json();
 
     const cityEl = document.querySelector(".city h2");
     cityEl.textContent = data.name;
@@ -52,7 +52,7 @@ async function checkWeather(city) {
     } else if (condition === "Mist") {
         icon.src = "images/fog.png";
     } else if (condition === "Snow") {
-        icon.src = "images/snow(1).png";
+        icon.src = "images/snow.png";
     } else if (condition === "Clear") {
         icon.src = "images/clear-sky.png";
     } else if (condition === "Tornado") {
